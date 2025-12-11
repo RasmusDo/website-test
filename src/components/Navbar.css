@@ -246,3 +246,16 @@
         font-size: 2rem;
     }
 }
+
+/* Dark Text Theme for Light Pages */
+.navbar.dark-text .logo-image {
+    filter: brightness(0) invert(0);
+}
+
+.navbar.dark-text .navbar-link .link-text {
+    color: #000000;
+}
+
+.navbar.dark-text .mobile-menu-button span {
+    background: #000000;
+}

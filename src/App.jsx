@@ -10,6 +10,7 @@ import Info from './pages/Info';
 import About from './pages/About';
 import PosterLanding from './pages/PosterLanding';
 import Home2 from './pages/Home2';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
             <Route path="/info" element={<Info />} />
             <Route path="/about" element={<About />} />
             <Route path="/minimal" element={<PosterLanding />} />
-
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <Footer />
