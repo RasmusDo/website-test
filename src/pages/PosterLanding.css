@@ -1,0 +1,248 @@
+/* Poster Landing - Split Screen Layout */
+.poster-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* LEFT PANEL - IMAGE */
+.poster-image-container {
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.poster-title-overlay {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15vw;
+    line-height: 0.85;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+/* RIGHT PANEL - CONTENT */
+.poster-content-container {
+    width: 50%;
+    margin-left: 50%;
+    /* Push content to right side */
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.poster-header {
+    margin-bottom: 4rem;
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.5rem;
+}
+
+.content-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    line-height: 0.9;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.poster-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 2rem 0;
+}
+
+.section-label {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+/* Events List */
+.poster-events {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.poster-event-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.poster-event-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.poster-event-item:hover {
+    background-color: #000;
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.event-index {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-right: 2rem;
+    opacity: 0.5;
+}
+
+.event-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.event-meta {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.event-arrow {
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.poster-event-item:hover .event-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Membership Section */
+.membership-section {
+    margin-top: auto;
+    /* Push to bottom if space allows */
+}
+
+.poster-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 80%;
+    margin-bottom: 2rem;
+}
+
+.poster-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s ease;
+}
+
+.poster-btn:hover {
+    transform: translateY(-2px);
+    background-color: #333;
+}
+
+.poster-footer {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .content-title {
+        font-size: 3.5rem;
+    }
+
+    .poster-content-container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .poster-page {
+        flex-direction: column;
+    }
+
+    .poster-image-container {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+    }
+
+    .poster-content-container {
+        width: 100%;
+        margin-left: 0;
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    .poster-title-overlay {
+        font-size: 20vw;
+    }
+
+    .content-title {
+        font-size: 3rem;
+    }
+}

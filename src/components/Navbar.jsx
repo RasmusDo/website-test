@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
+import logoImage from '../assets/images/logoslutstation3.webp';
 
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
     // Handle scroll effect
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            setScrolled(window.scrollY > window.innerHeight - 100); // Trigger slightly before the fold
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -34,8 +35,7 @@ const Navbar = () => {
         { name: 'Home', path: '/' },
         { name: 'Events', path: '/events' },
         { name: 'Membership', path: '/membership' },
-        { name: 'Info', path: '/info' },
-        { name: 'Studio', path: '/studio' }
+        { name: 'Info', path: '/info' }
     ];
 
     return (
@@ -53,8 +53,12 @@ const Navbar = () => {
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.2 }}
                         >
-                            <span className="logo-text">SLUTSTATION</span>
-                            <span className="logo-dot">●</span>
+                            <img
+                                src={logoImage}
+                                alt="Slutstation Logo"
+                                className="logo-image"
+                                style={{ height: '40px', width: 'auto' }}
+                            />
                         </motion.div>
                     </Link>
 
