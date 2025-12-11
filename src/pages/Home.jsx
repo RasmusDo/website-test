@@ -9,7 +9,7 @@ const Home = () => {
         <>
             <Hero />
 
-            {/* Events Section */}
+            {/* Events Section - Minimal Design */}
             <section className="container section">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -44,17 +44,16 @@ const Home = () => {
                                 maxWidth: '400px',
                                 lineHeight: 1.6
                             }}>
-
+                                Experience underground house music
                             </p>
                         </div>
-
                     </div>
 
                     <EventList />
                 </motion.div>
             </section>
 
-            {/* CTA Section */}
+            {/* CTA Section - Minimal & Clean */}
             <section className="container section" style={{ paddingTop: '15vh', paddingBottom: '15vh' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -64,8 +63,8 @@ const Home = () => {
                     style={{
                         textAlign: 'center',
                         padding: '8vh 0',
-                        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-                        borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+                        borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+                        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
                     }}
                 >
                     <h2 style={{
