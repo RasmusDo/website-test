@@ -23,6 +23,7 @@ const Hero = () => {
             justifyContent: 'center',
             background: 'var(--bg-color)'
         }}>
+            {/* 3D Scene Background */}
             <motion.div
                 style={{
                     position: 'absolute',
@@ -37,12 +38,16 @@ const Hero = () => {
                 <Scene />
             </motion.div>
 
+            {/* Text Overlay with Multiply Blend Mode */}
             <motion.div
                 style={{
                     zIndex: 1,
                     textAlign: 'center',
                     opacity,
-                    pointerEvents: 'none'
+                    pointerEvents: 'none',
+                    mixBlendMode: 'multiply',
+                    width: '100%',
+                    padding: '0 2rem'
                 }}
             >
                 <motion.h1
@@ -50,39 +55,21 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     style={{
-                        fontSize: 'clamp(4rem, 12vw, 10rem)',
+                        fontSize: 'clamp(3rem, 10vw, 9rem)',
                         fontFamily: 'var(--font-display)',
                         textTransform: 'uppercase',
                         letterSpacing: '-0.02em',
-                        lineHeight: 0.9,
-                        marginBottom: '2rem',
-                        color: 'var(--text-color)'
+                        lineHeight: 0.95,
+                        marginBottom: '0',
+                        color: '#000000',
+                        fontWeight: 700
                     }}
                 >
-
+                    Changing<br />Our<br />Nightlife
                 </motion.h1>
-
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    style={{
-                        fontSize: '1rem',
-                        letterSpacing: '0.3em',
-                        textTransform: 'uppercase',
-                        color: 'var(--text-muted)',
-                        fontFamily: 'var(--font-primary)',
-                        fontWeight: 300,
-                        display: 'flex',
-                        gap: '1rem',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}
-                >
-
-                </motion.p>
             </motion.div>
 
+            {/* Scroll Indicator */}
             <div style={{
                 position: 'absolute',
                 bottom: '2rem',

@@ -2,8 +2,9 @@
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 4rem 0 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: auto; /* Pushes footer to bottom if flex container is used */
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+  /* Pushes footer to bottom if flex container is used */
 }
 
 .footer-content {
@@ -33,7 +34,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 2rem;
 }
 
@@ -60,7 +61,7 @@
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+
   .footer-statement h2 {
     text-align: left;
   }
