@@ -271,7 +271,7 @@ We announce our events on Instagram. Stay tuned!`
                                     <span className="detail-value">Tech House</span>
                                 </div>
 
-                                <Link to="/events" className="next-event-button">
+                                <Link to="/event/1775961" className="next-event-button">
                                     <span>View the Event</span>
                                     <motion.span
                                         className="button-arrow"

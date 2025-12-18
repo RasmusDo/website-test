@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getEventById } from '../data/events';
+import './EventDetail.css';
 
 const EventDetail = () => {
     const { eventId } = useParams();
@@ -81,24 +82,10 @@ const EventDetail = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 style={{
-                            fontFamily: 'var(--font-display)',
-                            fontSize: 'clamp(3rem, 10vw, 8rem)',
-                            textTransform: 'uppercase',
-                            marginBottom: '1rem',
-                            color: 'var(--text-secondary)',
-                            letterSpacing: '0.02em'
-                        }}>
+                        <h1 className="event-title">
                             {event.title}
                         </h1>
-                        <div style={{
-                            display: 'flex',
-                            gap: '3rem',
-                            flexWrap: 'wrap',
-                            fontFamily: 'var(--font-body)',
-                            fontSize: '1.1rem',
-                            color: 'var(--text-secondary)'
-                        }}>
+                        <div className="event-hero-meta">
                             <span>{event.date}</span>
                             <span>{event.time}</span>
                             <span>{event.location}</span>
@@ -108,13 +95,8 @@ const EventDetail = () => {
             </div>
 
             {/* Content */}
-            <div className="container" style={{ paddingTop: '4rem', paddingBottom: '8vh', maxWidth: '1400px' }}>
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr minmax(300px, 350px)',
-                    gap: '4rem',
-                    alignItems: 'start'
-                }}>
+            <div className="container event-detail-content">
+                <div className="event-detail-grid">
                     {/* RIGHT SIDE - Event Details (Now on Left) */}
                     <div>
                         {/* Description */}
@@ -284,19 +266,10 @@ const EventDetail = () => {
 
                     {/* EVENT INFO SIDEBAR (Now on Right & Sticky) */}
                     <motion.div
+                        className="event-info-sidebar"
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        style={{
-                            background: 'rgba(255, 255, 255, 0.02)',
-                            border: '1px solid rgba(197, 160, 89, 0.2)',
-                            borderRadius: '8px',
-                            padding: '2rem',
-                            backdropFilter: 'blur(10px)',
-                            position: 'sticky',
-                            top: '120px',
-                            height: 'fit-content'
-                        }}
                     >
                         <h3 style={{
                             fontFamily: 'var(--font-display)',
