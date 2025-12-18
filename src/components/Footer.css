@@ -1,10 +1,12 @@
 .footer {
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: #000000 !important;
   padding: 4rem 0 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   margin-top: auto;
-  /* Pushes footer to bottom if flex container is used */
+  position: relative;
+  z-index: 20;
+  /* Keep it above fixed content on Events page */
 }
 
 .footer-content {
@@ -20,7 +22,7 @@
   text-transform: uppercase;
   line-height: 1.1;
   text-align: center;
-  color: var(--text-color);
+  color: #000000 !important;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -33,7 +35,7 @@
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-muted);
+  color: #666666 !important;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 2rem;
 }
@@ -44,7 +46,7 @@
 }
 
 .footer-socials a {
-  color: var(--text-color);
+  color: #000000 !important;
   transition: color 0.3s ease, transform 0.3s ease;
   display: flex;
   align-items: center;

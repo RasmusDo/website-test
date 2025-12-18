@@ -7,13 +7,12 @@
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     background: transparent;
+    mix-blend-mode: difference;
 }
 
 .navbar.scrolled {
     background: transparent;
-    /* Keep transparent on scroll */
-    backdrop-filter: none;
-    border-bottom: none;
+    padding: 0.5rem 0;
 }
 
 .navbar-container {
@@ -71,7 +70,6 @@
 
 .navbar.scrolled .navbar-link .link-text {
     color: #ffffff;
-    /* Keep white text on scroll */
 }
 
 .navbar-link:hover .link-text {
@@ -119,7 +117,6 @@
 
 .navbar.scrolled .mobile-menu-button span {
     background: #ffffff;
-    /* Keep white hamburger on scroll */
 }
 
 .mobile-menu-button.open span:first-child {
@@ -247,15 +244,9 @@
     }
 }
 
-/* Dark Text Theme for Light Pages */
+/* Dark Text Theme - Obsolete with mix-blend-mode but kept for reference if needed */
 .navbar.dark-text .logo-image {
     filter: brightness(0) invert(0);
 }
 
-.navbar.dark-text .navbar-link .link-text {
-    color: #000000;
-}
-
-.navbar.dark-text .mobile-menu-button span {
-    background: #000000;
-}
+/* ... */

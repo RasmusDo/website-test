@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Info = () => {
     const sections = [
@@ -41,11 +42,49 @@ const Info = () => {
         {
             title: "Unique Events",
             content: "So we started throwing our own. Events with real DJs, serious sound, and a crowd that actually listens. A real alternative to the nightlife scene. We’re not trying to fix the club. We’re building what comes after."
+        },
+        {
+            title: "Contact",
+            content: (
+                <>
+                    <p>Got questions or want to get involved?</p>
+                    <div style={{ marginTop: '2rem' }}>
+                        <p style={{ marginBottom: '0.5rem', color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Are you a DJ?</p>
+                        <Link to="/dj-application" style={{
+                            color: '#fff',
+                            textDecoration: 'none',
+                            fontSize: '1.2rem',
+                            borderBottom: '1px solid rgba(255,255,255,0.3)',
+                            paddingBottom: '4px',
+                            transition: 'all 0.3s ease'
+                        }}
+                            onMouseOver={(e) => {
+                                e.target.style.borderBottomColor = '#fff';
+                                e.target.style.opacity = '1';
+                            }}
+                            onMouseOut={(e) => {
+                                e.target.style.borderBottomColor = 'rgba(255,255,255,0.3)';
+                            }}>
+                            Apply to play
+                        </Link>
+                    </div>
+                    <div style={{ marginTop: '2rem' }}>
+                        <p style={{ marginBottom: '0.5rem', color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>General Inquiries</p>
+                        <a href="mailto:info@slutstation.se" style={{
+                            color: '#fff',
+                            textDecoration: 'none',
+                            fontSize: '1.2rem',
+                            borderBottom: '1px solid rgba(255,255,255,0.3)',
+                            paddingBottom: '4px'
+                        }}>info@slutstation.se</a>
+                    </div>
+                </>
+            )
         }
     ];
 
     return (
-        <div style={{ paddingTop: '120px', minHeight: '100vh', paddingBottom: '8vh' }}>
+        <div style={{ paddingTop: '120px', minHeight: '100vh', paddingBottom: '8vh', backgroundColor: '#111111', color: 'white' }}>
             <div className="container">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -60,7 +99,7 @@ const Info = () => {
                         marginBottom: '1rem',
                         letterSpacing: '-0.02em',
                         lineHeight: 0.9,
-                        color: 'var(--text-color)'
+                        color: 'white'
                     }}>
                         Info
                     </h1>
@@ -80,7 +119,7 @@ const Info = () => {
                                 fontFamily: 'var(--font-display)',
                                 fontSize: '2rem',
                                 marginBottom: '1.5rem',
-                                color: 'var(--accent-color)',
+                                color: '#C5A059',
                                 textTransform: 'uppercase'
                             }}>
                                 {section.title}
@@ -89,7 +128,7 @@ const Info = () => {
                                 fontFamily: 'var(--font-body)',
                                 fontSize: '1.1rem',
                                 lineHeight: 1.8,
-                                color: 'var(--text-muted)'
+                                color: 'rgba(255, 255, 255, 0.8)'
                             }}>
                                 {section.content}
                             </div>

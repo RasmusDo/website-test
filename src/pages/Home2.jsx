@@ -249,16 +249,16 @@ We announce our events on Instagram. Stay tuned!`
                                 className="next-event-content"
                             >
                                 <p className="next-event-label">Next Event</p>
-                                <h2 className="next-event-title">Winter Solstice</h2>
+                                <h2 className="next-event-title">Mister French</h2>
 
                                 <div className="event-details">
                                     <div className="event-detail-item">
                                         <span className="detail-label">Date</span>
-                                        <span className="detail-value">December 21, 2025</span>
+                                        <span className="detail-value">2026-01-28</span>
                                     </div>
                                     <div className="event-detail-item">
                                         <span className="detail-label">Time</span>
-                                        <span className="detail-value">22:00 - 04:00</span>
+                                        <span className="detail-value">22:00 - 03:00</span>
                                     </div>
                                     <div className="event-detail-item">
                                         <span className="detail-label">Location</span>

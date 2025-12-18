@@ -3,7 +3,13 @@ import { motion } from 'framer-motion';
 
 const PrivacyPolicy = () => {
     return (
-        <div style={{ paddingTop: '120px', minHeight: '100vh', paddingBottom: '8vh' }}>
+        <div style={{
+            paddingTop: '120px',
+            minHeight: '100vh',
+            paddingBottom: '8vh',
+            backgroundColor: '#111111',
+            color: '#FFFFFF'
+        }}>
             <div className="container" style={{ maxWidth: '900px' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -17,7 +23,7 @@ const PrivacyPolicy = () => {
                         marginBottom: '4rem',
                         letterSpacing: '-0.02em',
                         lineHeight: 0.9,
-                        color: 'var(--text-color)'
+                        color: '#FFFFFF'
                     }}>
                         Privacy Policy & Bylaws
                     </h1>
@@ -26,7 +32,7 @@ const PrivacyPolicy = () => {
                         fontFamily: 'var(--font-body)',
                         fontSize: '1rem',
                         lineHeight: 1.8,
-                        color: 'var(--text-color)',
+                        color: '#FFFFFF',
                         marginBottom: '4rem'
                     }}>
                         {/* Section: Stadgar */}
@@ -46,7 +52,7 @@ const PrivacyPolicy = () => {
                             <p><strong>§ 4 VERKSAMHETSÅR</strong><br />Föreningens verksamhetsår sammanfaller med kalenderår, 1 januari - 31 december.</p>
                             <p><strong>§ 5 MEDLEMSKAP</strong><br />Föreningen är öppen för alla som accepterar föreningens stadgar och årligen betalar medlemsavgift. Medlem har närvaro- och yttranderätt på alla föreningens möten.<br />Medlem som motarbetar föreningens målsättning eller bryter mot dessa stadgar kan uteslutas. För uteslutning krävs 3/4 majoritet på styrelsemöte. Utesluten medlem har rätt att överklaga uteslutning vid medlemsmöte, där den uteslutne även har rösträtt.</p>
 
-                            <h3 style={{ fontSize: '1.2rem', marginTop: '2rem', marginBottom: '1rem', fontWeight: 'bold' }}>§ 6 BESLUTANDE ORGAN</h3>
+                            <h3 style={{ fontSize: '1.2rem', marginTop: '2rem', marginBottom: '1rem', fontWeight: '' }}>§ 6 BESLUTANDE ORGAN</h3>
                             <p><strong>§ 6.1 ÅRSSTÄMMA</strong><br />FÖRENINGENS HÖGST BESLUTANDE ORGAN ÄR ÅRSSTÄMMA. ÅRSSTÄMMA SKA HÅLLAS SENAST 31 MARS.</p>
                             <p><strong>§ 6.2 EXTRA ÅRSSTÄMMA</strong><br />Extra årsstämma ska sammankallas om revisorer, styrelse eller minst 1/3 av föreningens medlemmar så kräver.</p>
                             <p><strong>§ 6.3 MEDLEMSMÖTE</strong><br />Medlemsmöte är föreningens näst högst beslutande organ. På medlemsmöte får ej beslut tas som strider mot beslut tagna vid årsstämma.</p>

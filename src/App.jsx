@@ -8,7 +8,6 @@ import Events from './pages/Events';
 import Membership from './pages/Membership';
 import EventDetail from './pages/EventDetail';
 import Info from './pages/Info';
-import About from './pages/About';
 import PosterLanding from './pages/PosterLanding';
 import Home2 from './pages/Home2';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -29,7 +28,6 @@ const AnimatedRoutes = () => {
         <Route path="/event/:eventId" element={<PageTransition><EventDetail /></PageTransition>} />
         <Route path="/membership" element={<PageTransition><Membership /></PageTransition>} />
         <Route path="/info" element={<PageTransition><Info /></PageTransition>} />
-        <Route path="/about" element={<PageTransition><About /></PageTransition>} />
         <Route path="/minimal" element={<PageTransition><PosterLanding /></PageTransition>} />
         <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
         <Route path="/dj-application" element={<PageTransition><DJApplication /></PageTransition>} />

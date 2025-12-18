@@ -165,6 +165,7 @@ const EventList = () => {
             <Link
                 key={event.id}
                 to={`/event/${event.id}`}
+                state={{ eventData: event }}
                 style={{
                     textDecoration: 'none',
                     color: 'inherit',

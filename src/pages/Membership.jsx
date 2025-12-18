@@ -11,7 +11,8 @@ const Membership = () => {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            paddingBottom: '8vh'
+            paddingBottom: '8vh',
+            backgroundColor: '#111111'
         }}>
             <div className="container" style={{ width: '100%', maxWidth: '900px' }}>
                 <motion.div
@@ -26,6 +27,7 @@ const Membership = () => {
                         textTransform: 'uppercase',
                         marginBottom: '2rem',
                         letterSpacing: '-0.02em',
+                        color: '#FFFFFF',
                         lineHeight: 0.9
                     }}>
                         Membership
@@ -34,7 +36,7 @@ const Membership = () => {
                         fontFamily: 'var(--font-body)',
                         maxWidth: '600px',
                         margin: '0 auto',
-                        color: '#888',
+                        color: '#FFFFFF',
                         lineHeight: 1.8,
                         fontSize: '1.1rem'
                     }}>

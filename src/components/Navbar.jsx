@@ -9,9 +9,7 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
 
-    // Pages that should have white text (dark specific backgrounds)
-    // Since global theme is dark, we default to white text everywhere
-    const isLightPage = false; // !['/', '/home-old', '/events'].includes(location.pathname);
+
 
 
     // Handle scroll effect
@@ -47,7 +45,7 @@ const Navbar = () => {
     return (
         <>
             <motion.nav
-                className={`navbar ${scrolled ? 'scrolled' : ''} ${isLightPage ? 'dark-text' : ''}`}
+                className={`navbar ${scrolled ? 'scrolled' : ''}`}
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}

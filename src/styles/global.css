@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;600&display=swap');
 
 :root {
-    --bg-color: #ffffff;
+    --bg-color: #E9E9E9;
     --text-color: #1a1a1a;
+    --text-secondary: #ffffff;
     --accent-color: #C5A059;
     --accent-secondary: #8a7025;
     --font-display: 'Anton', sans-serif;
