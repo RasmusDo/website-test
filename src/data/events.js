@@ -13,56 +13,60 @@ const staticEvents = [];
 const customEventData = {
     '1775961': {
         title: 'Mister French',
-        customDescription: 'Join us for an unforgettable night of deep house and techno.\n\nMister French brings the underground sounds of Paris to Stockholm for one night only. Experience carefully curated sounds in an intimate setting where the music takes center stage.\n\nThis is not just another club night - it\'s a journey through sound, atmosphere, and connection.',
+        customDescription: 'Join us for an unforgettable night of Tech-house and Minimal house.\n\nTogether with Mister French, we bring the Tech-house sounds of Ibiza to Stockholm for one night only. Experience carefully curated sounds in an vibrant setting where the music takes center stage.\n\nThis is not just another club night, it\'s a journey through sound, atmosphere, and connection.\n\nNo Membership required.',
         customImage: '/images/events/mister-french.jpg',
         lineup: [
             {
                 name: 'TOMI & KESH',
-                bio: 'Tomi & Kesh are a duo from Stockholm, Sweden. They are known for their unique sound, which is a mix of house, techno, and deep house. They have been performing at clubs and events all over the world.',
+                bio: 'Tomi & Kesh are a Stuttgart-based tech house duo delivering raw, hypnotic energy made for ibiza venues and big sound systems. With multiple Beatport #1s and support from scene heavyweights, they’re a go-to act for intense tech-house sets.',
                 link: 'https://soundcloud.com/tomi-and-kesh',
-                style: 'Tech House / Deep House'
+                style: 'Tech House'
             },
             {
                 name: 'VASA',
                 bio: 'Vasa BIO',
                 link: 'https://www.instagram.com/vasa.music/',
-                style: 'TBA'
+                style: 'Tech House'
             },
             {
                 name: 'DAVVE',
                 bio: 'DAVVE BIO',
-                link: 'https://www.instagram.com/davve/',
+                link: 'https://www.instagram.com/davveofficial/',
                 style: 'Tech House'
             },
             {
                 name: 'CATCH A',
                 bio: 'CATCH A BIO',
                 link: 'https://www.instagram.com/catchadj/',
-                style: 'Tech House'
+                style: 'Minimal House'
             },
             {
-                name: 'LAZY FOCUS',
-                bio: 'LAZY FOCUS BIO',
+                name: 'LAZY FOUS',
+                bio: 'LAZY FOUS BIO',
                 link: 'https://www.instagram.com/lazyfous/',
-                style: 'Tech House'
+                style: 'French House'
             },
             {
                 name: 'ESSY',
                 bio: 'ESSY BIO',
                 link: 'https://www.instagram.com/essynachtweij/',
-                style: 'Tech House'
+                style: 'Afro House'
             },
         ],
         venue: {
             name: 'Mister French',
             capacity: '750',
-            facilities: ['Premium Sound System', 'Bar', 'Terrace'],
+            facilities: ['Premium Sound System', 'Custom made stage design', '2 Bars'],
             accessibility: 'Location: Mister French Tullhus 2, Stockholm'
         },
         sections: [
             {
                 title: 'House Rules',
-                content: '• Respect the space and each other\n• Zero tolerance for harassment\n• Have fun!'
+                content: '• Respect the space and each other.\n• There will be on-duty security personnel(ordningsvakter).\n• NO BYOB.\n• Zero tolerance for harassment, racism etc.\n• Phones down, eyes up.\n• Strictly forbidden to not have fun!'
+            },
+            {
+                title: 'Getting There',
+                content: 'This event is NOT held at a secret location, please refer to the adress above. Keep an eye on our Instagram for more information.'
             }
         ]
     }
