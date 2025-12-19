@@ -7,7 +7,7 @@ const Logo = () => {
     const groupRef = useRef();
 
     // Load the logo7.glb model
-    const { scene } = useGLTF('/website-test/models/logo7.glb');
+    const { scene } = useGLTF('/models/logo7.glb');
 
     // Animate rotation - Look at cursor
     useFrame((state) => {
@@ -55,6 +55,6 @@ const Scene = () => {
 };
 
 // Preload the model for better performance
-useGLTF.preload('/website-test/models/logo7.glb');
+useGLTF.preload('/models/logo7.glb');
 
 export default Scene;

@@ -9,6 +9,7 @@ const EventDetail = () => {
     const location = useLocation();
     const [event, setEvent] = useState(null);
     const [loading, setLoading] = useState(true);
+    const billettoLink = 'https://billetto.se/e/slutstation-biljetter-1775961';
 
     useEffect(() => {
         async function loadEvent() {
@@ -31,24 +32,43 @@ const EventDetail = () => {
     if (loading) {
         return (
             <div style={{ paddingTop: '120px', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div className="container" style={{ textAlign: 'center' }}>
-                    <div style={{
-                        fontSize: '1.2rem',
-                        marginBottom: '1rem',
-                        color: 'var(--text-muted)'
-                    }}>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="container"
+                    style={{ textAlign: 'center' }}
+                >
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        style={{
+                            fontSize: '1.2rem',
+                            marginBottom: '1rem',
+                            color: '#fff'
+                        }}
+                    >
                         Loading event...
-                    </div>
-                    <div style={{
-                        width: '40px',
-                        height: '40px',
-                        border: '3px solid rgba(255, 107, 53, 0.2)',
-                        borderTop: '3px solid var(--accent-color)',
-                        borderRadius: '50%',
-                        margin: '0 auto',
-                        animation: 'spin 1s linear infinite'
-                    }} />
-                </div>
+                    </motion.div>
+                    <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 1,
+                            ease: "linear"
+                        }}
+                        style={{
+                            width: '40px',
+                            height: '40px',
+                            border: '3px solid rgba(255, 107, 53, 0.2)',
+                            borderTop: '3px solid var(--accent-color)',
+                            borderRadius: '50%',
+                            margin: '0 auto',
+                        }}
+                    />
+                </motion.div>
             </div>
         );
     }
@@ -307,7 +327,7 @@ const EventDetail = () => {
                         </div>
 
                         <a
-                            href={event.ticketLink}
+                            href={billettoLink}
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{

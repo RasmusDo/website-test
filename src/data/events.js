@@ -62,11 +62,7 @@ const customEventData = {
         sections: [
             {
                 title: 'House Rules',
-                content: '• Respect the space and each other\n• No photos on the dancefloor\n• What happens here, stays here\n• Zero tolerance for harassment'
-            },
-            {
-                title: 'Getting There',
-                content: 'Location and directions will be sent via email 24 hours before the event. Keep an eye on your inbox and our Instagram.'
+                content: '• Respect the space and each other\n• Zero tolerance for harassment\n• Have fun!'
             }
         ]
     }

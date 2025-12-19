@@ -38,7 +38,7 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <Router basename="/website-test">
+    <Router basename="/">
       <ScrollToTop />
       {/* Foolproof Dark Background Layer */}
       <div style={{

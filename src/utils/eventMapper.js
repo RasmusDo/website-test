@@ -6,6 +6,7 @@ import fredagenPoster from '../assets/images/eventposters/Fredagen.png';
 import lastpathPoster from '../assets/images/eventposters/Lastpath.png';
 import outdoorsPoster from '../assets/images/eventposters/Outdoors.jpg';
 import storstaPoster from '../assets/images/eventposters/storsta.png';
+import posterNew from '../assets/images/eventposters/posternew.png';
 
 /**
  * Map Billetto event to application event format
@@ -97,16 +98,32 @@ export function mapBillettoEvent(billettoEvent, index = 0) {
 
     // Custom fallback images for past events without images
     const defaultImages = [
-
         lastpathPoster,
         outdoorsPoster,
         fredagenPoster,
         storstaPoster,
     ];
 
-    // Use image_link if available, otherwise pick from default images sequentially based on list index
-    // This ensures specific images are used in order for the list of events
-    const eventImage = image_link || defaultImages[index % defaultImages.length];
+    // Determine if event is upcoming (today or future)
+    let isUpcoming = false;
+    if (eventStartDate) {
+        const eventDate = new Date(eventStartDate);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        isUpcoming = eventDate >= today;
+    }
+
+    // Use image_link if available. 
+    // If not, use posterNew for upcoming events, or rotate specific past images for past events.
+    let eventImage = image_link;
+
+    if (!eventImage) {
+        if (isUpcoming) {
+            eventImage = posterNew;
+        } else {
+            eventImage = defaultImages[index % defaultImages.length];
+        }
+    }
 
     // Map to application format
     return {

@@ -262,7 +262,7 @@ We announce our events on Instagram. Stay tuned!`
                                     </div>
                                     <div className="event-detail-item">
                                         <span className="detail-label">Location</span>
-                                        <span className="detail-value">TBA for Members</span>
+                                        <span className="detail-value">Mister French</span>
                                     </div>
                                 </div>
 
