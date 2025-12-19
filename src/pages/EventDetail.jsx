@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getEventById } from '../data/events';
+import { fetchEventTicketTypes } from '../services/billettoService';
 import './EventDetail.css';
 
 const EventDetail = () => {
@@ -9,6 +10,7 @@ const EventDetail = () => {
     const location = useLocation();
     const [event, setEvent] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [ticketTypes, setTicketTypes] = useState([]);
     const billettoLink = 'https://billetto.se/e/slutstation-biljetter-1775961';
 
     useEffect(() => {
@@ -18,6 +20,13 @@ const EventDetail = () => {
                 // Always call getEventById to ensure custom data merging
                 const fetchedEvent = await getEventById(eventId);
                 setEvent(fetchedEvent);
+
+                if (fetchedEvent) {
+                    const tickets = await fetchEventTicketTypes(eventId);
+                    if (tickets) {
+                        setTicketTypes(tickets);
+                    }
+                }
             } catch (error) {
                 console.error('Error loading event:', error);
                 setEvent(null);
@@ -322,7 +331,20 @@ const EventDetail = () => {
                             </div>
                             <div style={{ paddingTop: '1rem', borderTop: '1px solid rgba(197, 160, 89, 0.2)' }}>
                                 <p style={{ fontSize: '0.75rem', color: '#fff', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Price</p>
-                                <p style={{ fontSize: '1.8rem', color: '#fff', fontWeight: '600' }}>{event.price || '195 SEK'}</p>
+                                {ticketTypes && ticketTypes.length > 0 ? (
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                        {ticketTypes.map((ticket, idx) => (
+                                            <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                                <span style={{ fontSize: '0.9rem', color: '#ccc' }}>{ticket.name}</span>
+                                                <span style={{ fontSize: '1.2rem', color: '#fff', fontWeight: '600' }}>
+                                                    {ticket.price > 0 ? `${ticket.price / 100} ${ticket.currency || 'SEK'}` : 'Free'}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <p style={{ fontSize: '1.8rem', color: '#fff', fontWeight: '600' }}>{event.price || '195 SEK'}</p>
+                                )}
                             </div>
                         </div>
 

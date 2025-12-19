@@ -161,6 +161,26 @@ export async function fetchBillettoEventById(eventId) {
 }
 
 /**
+ * Fetch ticket types for a specific event
+ * @param {string} eventId - Billetto event ID
+ * @returns {Promise<Array>} Ticket types
+ */
+export async function fetchEventTicketTypes(eventId) {
+    try {
+        console.log(`Fetching ticket types for event ${eventId}...`);
+        const data = await makeRequest(`/organiser/ticket_types?event=${eventId}`, {
+            method: 'GET',
+        });
+
+        console.log('Ticket types response:', data);
+        return data?.data || data || [];
+    } catch (error) {
+        console.error(`Failed to fetch ticket types for event ${eventId}:`, error);
+        return null;
+    }
+}
+
+/**
  * Get ticket widget URL for an event
  * @param {string} eventId - Billetto event ID
  * @returns {string} Widget URL

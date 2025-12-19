@@ -254,7 +254,7 @@ We announce our events on Instagram. Stay tuned!`
                                 <div className="event-details">
                                     <div className="event-detail-item">
                                         <span className="detail-label">Date</span>
-                                        <span className="detail-value">2026-01-28</span>
+                                        <span className="detail-value">2026-02-28</span>
                                     </div>
                                     <div className="event-detail-item">
                                         <span className="detail-label">Time</span>

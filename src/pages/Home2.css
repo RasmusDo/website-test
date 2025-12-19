@@ -154,11 +154,16 @@
     }
 
     .gallery-images-row {
-        gap: 1.5rem;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .gallery-image-item {
-        width: 150px;
+        width: 100%;
+        max-width: 340px;
+        /* Limit width for larger mobile screens */
+        aspect-ratio: 3/4;
+        /* Better for portrait images */
     }
 }
 
